@@ -6,8 +6,9 @@ pipeline {
     environment {
         UBUNTU_SSH_PASSWORD = credentials('UBUNTU_SSH_PASSWORD')
     }
-
-
+    parameters {
+        choice(name: 'ENV', choices: ['dev', 'prod' ], description: 'Select Environment')
+    }
 
     stages {
 
