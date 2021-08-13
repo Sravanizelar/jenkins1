@@ -14,7 +14,7 @@ pipeline {
         stage('Find the Server') {
             steps {
 
-                sh 'echo' 
+                aws s3 ls
                     
           
             }
